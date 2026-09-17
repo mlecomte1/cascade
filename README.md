@@ -4,14 +4,6 @@
   <img src="docs/banner.svg" alt="Cascade — décodeur desktop hors ligne" width="920">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11%2B-2ee6c7?style=for-the-badge&labelColor=04151c" alt="Python 3.11+">
-  <img src="https://img.shields.io/badge/Windows-Debian-7ee0ff?style=for-the-badge&labelColor=04151c" alt="Windows et Debian">
-  <img src="https://img.shields.io/badge/réseau-aucun-ff6a45?style=for-the-badge&labelColor=1a0a10" alt="Aucun réseau">
-  <img src="https://img.shields.io/badge/PySide6-Qt-2ee6c7?style=for-the-badge&labelColor=04151c" alt="PySide6">
-  <img src="https://img.shields.io/badge/version-0.2.0-ffc857?style=for-the-badge&labelColor=1a0a10" alt="Version 0.2.0">
-</p>
-
 <p align="center"><strong>Cascade</strong> est un décodeur / encodeur de bureau.<br>
 Tu colles un payload, tu glisses un fichier, ou tu empiles des langages.<br>
 Tout reste sur la machine : pas de cloud, pas d’historique, pas de base.</p>
