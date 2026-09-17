@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-label="Cascade">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04151c"/>
+      <stop offset="55%" stop-color="#072830"/>
+      <stop offset="100%" stop-color="#1a0a10"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2ee6c7"/>
+      <stop offset="100%" stop-color="#7ee0ff"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6a45"/>
+      <stop offset="100%" stop-color="#ffc857"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="420" rx="28" fill="url(#bg)"/>
+  <g opacity="0.18" fill="none" stroke="#2ee6c7" stroke-width="1">
+    <path d="M80 0v420M160 0v420M240 0v420M320 0v420M400 0v420M480 0v420M560 0v420M640 0v420M720 0v420M800 0v420M880 0v420M960 0v420M1040 0v420M1120 0v420M1200 0v420"/>
+    <path d="M0 60h1280M0 120h1280M0 180h1280M0 240h1280M0 300h1280M0 360h1280"/>
+  </g>
+  <circle cx="1080" cy="70" r="90" fill="#2ee6c7" opacity="0.07"/>
+  <circle cx="1180" cy="320" r="130" fill="#ff6a45" opacity="0.08"/>
+
+  <g transform="translate(72 86)">
+    <rect x="0" y="84" width="220" height="44" rx="12" fill="#3f1824" stroke="#ff6a45" stroke-width="2"/>
+    <text x="110" y="112" text-anchor="middle" fill="#ffc857" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">SHA-256</text>
+    <rect x="18" y="56" width="220" height="44" rx="12" fill="#0d3646" stroke="#2ee6c7" stroke-width="2"/>
+    <text x="128" y="84" text-anchor="middle" fill="#7ee0ff" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">ROT13</text>
+    <rect x="36" y="28" width="220" height="44" rx="12" fill="#0a2c38" stroke="#7ee0ff" stroke-width="2"/>
+    <text x="146" y="56" text-anchor="middle" fill="#e7fffb" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700">Base64</text>
+    <rect x="54" y="0" width="220" height="44" rx="12" fill="#2ee6c7"/>
+    <text x="164" y="28" text-anchor="middle" fill="#04221c" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="800">clair</text>
+  </g>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="420" y="130" fill="#2ee6c7" font-size="18" font-weight="800" letter-spacing="6">OFFLINE</text>
+    <text x="420" y="210" fill="#e7fffb" font-size="72" font-weight="800" letter-spacing="4">CASCADE</text>
+    <text x="420" y="258" fill="#8ab8bc" font-size="22">Décodeur desktop. Zéro réseau. Zéro historique.</text>
+    <g>
+      <rect x="420" y="292" width="168" height="40" rx="20" fill="#0d3646" stroke="#2ee6c7"/>
+      <text x="504" y="318" text-anchor="middle" fill="#2ee6c7" font-size="14" font-weight="700">Décoder · cyan</text>
+      <rect x="600" y="292" width="176" height="40" rx="20" fill="#3f1824" stroke="#ff6a45"/>
+      <text x="688" y="318" text-anchor="middle" fill="#ff6a45" font-size="14" font-weight="700">Encoder · corail</text>
+      <rect x="788" y="292" width="150" height="40" rx="20" fill="#0a2c38" stroke="#7ee0ff"/>
+      <text x="863" y="318" text-anchor="middle" fill="#7ee0ff" font-size="14" font-weight="700">Windows · Debian</text>
+    </g>
+  </g>
+</svg>

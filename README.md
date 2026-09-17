@@ -1,39 +1,170 @@
 # Cascade
 
-Desktop decoder, 100% offline. Session memory only — no history, no network, no database.
+<p align="center">
+  <img src="docs/banner.svg" alt="Cascade — décodeur desktop hors ligne" width="920">
+</p>
 
-## Sur le PC (sans Python)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11%2B-2ee6c7?style=for-the-badge&labelColor=04151c" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/Windows-Debian-7ee0ff?style=for-the-badge&labelColor=04151c" alt="Windows et Debian">
+  <img src="https://img.shields.io/badge/réseau-aucun-ff6a45?style=for-the-badge&labelColor=1a0a10" alt="Aucun réseau">
+  <img src="https://img.shields.io/badge/PySide6-Qt-2ee6c7?style=for-the-badge&labelColor=04151c" alt="PySide6">
+  <img src="https://img.shields.io/badge/version-0.2.0-ffc857?style=for-the-badge&labelColor=1a0a10" alt="Version 0.2.0">
+</p>
 
-Un seul fichier : `dist\Cascade.exe` (copie aussi sur le Bureau).
+<p align="center"><strong>Cascade</strong> est un décodeur / encodeur de bureau.<br>
+Tu colles un payload, tu glisses un fichier, ou tu empiles des langages.<br>
+Tout reste sur la machine : pas de cloud, pas d’historique, pas de base.</p>
 
-Double-clic, ou copie-le où tu veux (Bureau, USB, autre dossier). Pas besoin de Python ni du projet.
+---
 
-Pour le régénérer après un changement :
+## Deux visages
+
+<p align="center">
+  <img src="docs/modes.svg" alt="Mode Décoder en cyan, mode Encoder en corail" width="920">
+</p>
+
+| | **Décoder** | **Encoder** |
+| --- | --- | --- |
+| Couleur | Cyan | Corail |
+| Idée | Auto déroule les couches | Toi tu empiles à la main |
+| Entrée | Payload, fichier, image | Message clair |
+| Sortie | 2 ou 3 pistes classées | Pipeline exact |
+
+---
+
+## Comment Auto travaille
+
+<p align="center">
+  <img src="docs/flow.svg" alt="Entrée, détection, cascade, pistes" width="920">
+</p>
+
+```mermaid
+flowchart LR
+  A[Payload / fichier / image] --> B[Détection locale]
+  B --> C[Peel des couches]
+  C --> D[Score des nœuds]
+  D --> E[2 ou 3 pistes]
+  E --> F[Texte · Hex · Copier · Sauver]
+```
+
+Les hashes (MD5, SHA-1, SHA-256, SHA-512) sont **à sens unique** : Auto les identifie, il ne les inverse pas.
+
+---
+
+## Langages
+
+<p align="center">
+  <img src="docs/catalog.svg" alt="Encodages, chiffres, crypto, CTF" width="920">
+</p>
+
+<details>
+<summary>Liste complète</summary>
+
+| Famille | Opérations |
+| --- | --- |
+| Encodages | Base64, Base32, Base32hex, Base58, Base85 / Ascii85, hex, décimal, binaire, Morse, URL, UU, zlib, UTF-16 LE/BE, Latin-1, quoted-printable, entités HTML, échappements Unicode |
+| Permutations | ROT13, ROT-N, ROT47, Atbash, reverse |
+| Chiffres | César (brute), Vigenère, XOR (clé, brute 1–3 octets, wordlist) |
+| Crypto | AES, DES, 3DES, RC4 |
+| Images | QR, LSB |
+| CTF / web | JWT, PowerShell encoded, `atob`, JS beautify |
+| Sens unique | MD5, SHA-1, SHA-256, SHA-512 |
+
+</details>
+
+---
+
+## Architecture
+
+```mermaid
+flowchart TB
+  subgraph UI["Fenêtre PySide6"]
+    D[Décoder]
+    E[Encoder]
+    I[Glisser-déposer]
+  end
+  subgraph Engine["Moteur hors ligne"]
+    M[explore / magic]
+    R[recipe / pipeline]
+    O[registry des langages]
+  end
+  D --> M --> O
+  E --> R --> O
+  I --> D
+  I --> E
+```
+
+Rien n’est persisté. Fermer la fenêtre, c’est tout oublier.
+
+<p align="center">
+  <img src="docs/privacy.svg" alt="Pas de réseau, pas d’historique, hashes irréversibles" width="920">
+</p>
+
+---
+
+## Lancer
+
+### Windows — un seul fichier
+
+Copie `Cascade.exe` (Bureau ou `dist\`) où tu veux. Double-clic. Pas de Python.
+
+> Premier lancement un peu plus long. SmartScreen peut demander *Informations complémentaires → Exécuter quand même* (l’exe n’est pas signé).
+
+Pour le régénérer après une modification :
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File packaging\build-windows.ps1
 ```
 
-## Lancer depuis le code source
+### Windows — depuis le code
 
-Windows : double-clic sur `Cascade.bat`, ou :
+Double-clic sur `Cascade.bat`. Le premier lancement crée le venv.
 
-```powershell
-C:\Users\mathi\Documents\Projet\decoder\Cascade.bat
-```
-
-Debian :
+### Debian — depuis le code
 
 ```bash
 sudo apt install libxcb-cursor0 libegl1   # une fois
 bash cascade.sh
 ```
 
-Le premier lancement crée le venv et installe les dépendances. Les suivants ouvrent juste la fenêtre.
+Le `.deb` se construit **sur Debian** :
 
-## Package
+```bash
+bash packaging/build-debian.sh
+```
 
-- Windows portable exe: `packaging/build-windows.ps1` → `dist/Cascade.exe`
-- Debian `.deb` (à lancer **sur Debian**): `bash packaging/build-debian.sh`
+---
 
-QR / LSB : **Ouvrir un fichier** image, puis laisser Auto lire le QR ou le LSB.
+## Développement
+
+```text
+decoder/
+├── src/cascade/          # app, UI, moteur
+├── tests/                # régressions Auto + encodages
+├── packaging/            # PyInstaller + Debian
+├── docs/                 # visuels du README
+├── Cascade.bat           # lancement Windows
+└── cascade.sh            # lancement Debian
+```
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\pip install -e ".[dev]"
+$env:PYTHONPATH = "src"
+.\.venv\Scripts\pytest
+```
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -e ".[dev]"
+PYTHONPATH=src .venv/bin/pytest
+```
+
+Python **3.11+** (le build Windows actuel tourne en 3.14). Dépendances runtime : PySide6, pycryptodome, Pillow, opencv-python-headless, numpy.
+
+---
+
+<p align="center">
+  <sub>Cascade · hors ligne · mémoire vive uniquement</sub>
+</p>

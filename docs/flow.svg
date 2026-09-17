@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" role="img" aria-label="Parcours Auto">
+  <rect width="1280" height="340" rx="28" fill="#04151c"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="48" y="48" fill="#7ee0ff" font-size="13" font-weight="800" letter-spacing="3">AUTO · DEROULEMENT</text>
+    <g>
+      <rect x="48" y="84" width="210" height="180" rx="20" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="153" y="140" text-anchor="middle" fill="#2ee6c7" font-size="15" font-weight="800">1 · Entrée</text>
+      <text x="153" y="172" text-anchor="middle" fill="#e7fffb" font-size="14">Texte, fichier</text>
+      <text x="153" y="196" text-anchor="middle" fill="#8ab8bc" font-size="14">ou image QR / LSB</text>
+      <text x="153" y="228" text-anchor="middle" fill="#8ab8bc" font-size="13">glisser-déposer</text>
+    </g>
+    <text x="278" y="180" fill="#2ee6c7" font-size="28">’</text>
+    <g>
+      <rect x="318" y="84" width="210" height="180" rx="20" fill="#0d3646" stroke="#2ee6c7"/>
+      <text x="423" y="140" text-anchor="middle" fill="#2ee6c7" font-size="15" font-weight="800">2 · Détection</text>
+      <text x="423" y="172" text-anchor="middle" fill="#e7fffb" font-size="14">Base64, hex, Morse,</text>
+      <text x="423" y="196" text-anchor="middle" fill="#e7fffb" font-size="14">chiffres, JWT&</text>
+      <text x="423" y="228" text-anchor="middle" fill="#8ab8bc" font-size="13">heuristiques locales</text>
+    </g>
+    <text x="548" y="180" fill="#2ee6c7" font-size="28">’</text>
+    <g>
+      <rect x="588" y="84" width="210" height="180" rx="20" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="693" y="140" text-anchor="middle" fill="#2ee6c7" font-size="15" font-weight="800">3 · Cascade</text>
+      <text x="693" y="172" text-anchor="middle" fill="#e7fffb" font-size="14">Peel couche par couche</text>
+      <text x="693" y="196" text-anchor="middle" fill="#e7fffb" font-size="14">jusquà 8 niveaux</text>
+      <text x="693" y="228" text-anchor="middle" fill="#8ab8bc" font-size="13">mémoire vive seulement</text>
+    </g>
+    <text x="818" y="180" fill="#2ee6c7" font-size="28">’</text>
+    <g>
+      <rect x="858" y="84" width="374" height="180" rx="20" fill="#062430" stroke="#7ee0ff"/>
+      <text x="1045" y="140" text-anchor="middle" fill="#7ee0ff" font-size="15" font-weight="800">4 · Pistes</text>
+      <text x="1045" y="176" text-anchor="middle" fill="#e7fffb" font-size="16">Les 2 ou 3 lectures les plus plausibles</text>
+      <text x="1045" y="208" text-anchor="middle" fill="#8ab8bc" font-size="14">Clique un onglet pour comparer</text>
+      <text x="1045" y="236" text-anchor="middle" fill="#8ab8bc" font-size="13">Copier le chemin · Enregistrer le fichier</text>
+    </g>
+  </g>
+</svg>

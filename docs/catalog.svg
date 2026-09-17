@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" role="img" aria-label="Familles de langages Cascade">
+  <rect width="1280" height="300" rx="28" fill="#04151c"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="48" y="48" fill="#8ab8bc" font-size="13" font-weight="800" letter-spacing="3">LANGAGES</text>
+    <g>
+      <rect x="48" y="72" width="284" height="190" rx="18" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="190" y="112" text-anchor="middle" fill="#2ee6c7" font-size="16" font-weight="800">Encodages</text>
+      <text x="190" y="148" text-anchor="middle" fill="#e7fffb" font-size="13">Base64 · 32 · 58 · 85</text>
+      <text x="190" y="172" text-anchor="middle" fill="#e7fffb" font-size="13">Hex · binaire · Morse</text>
+      <text x="190" y="196" text-anchor="middle" fill="#8ab8bc" font-size="13">URL · UU · zlib · UTF-16</text>
+    </g>
+    <g>
+      <rect x="348" y="72" width="284" height="190" rx="18" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="490" y="112" text-anchor="middle" fill="#7ee0ff" font-size="16" font-weight="800">Chiffres classiques</text>
+      <text x="490" y="148" text-anchor="middle" fill="#e7fffb" font-size="13">ROT13 · ROT47 · Atbash</text>
+      <text x="490" y="172" text-anchor="middle" fill="#e7fffb" font-size="13">César · Vigenère · XOR</text>
+      <text x="490" y="196" text-anchor="middle" fill="#8ab8bc" font-size="13">brute force limité</text>
+    </g>
+    <g>
+      <rect x="648" y="72" width="284" height="190" rx="18" fill="#1a0a10" stroke="#6e3038"/>
+      <text x="790" y="112" text-anchor="middle" fill="#ff6a45" font-size="16" font-weight="800">Crypto &amp; images</text>
+      <text x="790" y="148" text-anchor="middle" fill="#fff3ec" font-size="13">AES · DES · 3DES · RC4</text>
+      <text x="790" y="172" text-anchor="middle" fill="#fff3ec" font-size="13">QR · LSB stégano</text>
+      <text x="790" y="196" text-anchor="middle" fill="#c49a90" font-size="13">clé / IV en hex</text>
+    </g>
+    <g>
+      <rect x="948" y="72" width="284" height="190" rx="18" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="1090" y="112" text-anchor="middle" fill="#ffc857" font-size="16" font-weight="800">CTF &amp; web</text>
+      <text x="1090" y="148" text-anchor="middle" fill="#e7fffb" font-size="13">JWT · PowerShell</text>
+      <text x="1090" y="172" text-anchor="middle" fill="#e7fffb" font-size="13">atob · JS beautify</text>
+      <text x="1090" y="196" text-anchor="middle" fill="#8ab8bc" font-size="13">HTML · Unicode escape</text>
+    </g>
+  </g>
+</svg>

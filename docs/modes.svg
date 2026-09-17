@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" role="img" aria-label="Deux modes Cascade">
+  <rect width="1280" height="420" rx="28" fill="#041018"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <rect x="36" y="36" width="590" height="348" rx="24" fill="#04151c" stroke="#1c5566" stroke-width="2"/>
+    <rect x="36" y="36" width="8" height="348" rx="4" fill="#2ee6c7"/>
+    <text x="72" y="88" fill="#2ee6c7" font-size="13" font-weight="800" letter-spacing="3">MODE CYAN</text>
+    <text x="72" y="136" fill="#e7fffb" font-size="34" font-weight="800">Décoder</text>
+    <text x="72" y="176" fill="#8ab8bc" font-size="16">Colle un payload. Auto déroule les couches</text>
+    <text x="72" y="200" fill="#8ab8bc" font-size="16">et propose 2 ou 3 pistes lisibles.</text>
+    <rect x="72" y="232" width="518" height="52" rx="14" fill="#062430" stroke="#1c5566"/>
+    <text x="92" y="264" fill="#7ee0ff" font-size="15" font-family="Consolas, Menlo, monospace">WX11TGVL& ’ Base64 ’ ROT47 ’ texte</text>
+    <g>
+      <rect x="72" y="304" width="150" height="40" rx="12" fill="#0d3646" stroke="#2ee6c7"/>
+      <text x="147" y="330" text-anchor="middle" fill="#2ee6c7" font-size="14" font-weight="700">Piste 1</text>
+      <rect x="234" y="304" width="150" height="40" rx="12" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="309" y="330" text-anchor="middle" fill="#8ab8bc" font-size="14" font-weight="700">Piste 2</text>
+      <rect x="396" y="304" width="150" height="40" rx="12" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="471" y="330" text-anchor="middle" fill="#8ab8bc" font-size="14" font-weight="700">Piste 3</text>
+    </g>
+
+    <rect x="654" y="36" width="590" height="348" rx="24" fill="#1a0a10" stroke="#6e3038" stroke-width="2"/>
+    <rect x="654" y="36" width="8" height="348" rx="4" fill="#ff6a45"/>
+    <text x="690" y="88" fill="#ff6a45" font-size="13" font-weight="800" letter-spacing="3">MODE CORAIL</text>
+    <text x="690" y="136" fill="#fff3ec" font-size="34" font-weight="800">Encoder</text>
+    <text x="690" y="176" fill="#c49a90" font-size="16">Tu empiles les langages à la main.</text>
+    <text x="690" y="200" fill="#c49a90" font-size="16">Un clic = une couche. Les hashes restent irréversibles.</text>
+    <g>
+      <rect x="690" y="232" width="110" height="40" rx="20" fill="#ff6a45"/>
+      <text x="745" y="258" text-anchor="middle" fill="#2a0b08" font-size="14" font-weight="800">clair</text>
+      <text x="818" y="258" fill="#ffc857" font-size="20">’</text>
+      <rect x="842" y="232" width="110" height="40" rx="20" fill="#3f1824" stroke="#ff6a45"/>
+      <text x="897" y="258" text-anchor="middle" fill="#ff6a45" font-size="14" font-weight="700">Base64</text>
+      <text x="970" y="258" fill="#ffc857" font-size="20">’</text>
+      <rect x="994" y="232" width="110" height="40" rx="20" fill="#3f1824" stroke="#ffc857"/>
+      <text x="1049" y="258" text-anchor="middle" fill="#ffc857" font-size="14" font-weight="700">Hex</text>
+    </g>
+    <rect x="690" y="304" width="518" height="40" rx="12" fill="#241016" stroke="#6e3038"/>
+    <text x="710" y="330" fill="#ffc857" font-size="14" font-family="Consolas, Menlo, monospace">pipeline manuel · clic après clic</text>
+  </g>
+</svg>

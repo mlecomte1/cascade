@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 220" role="img" aria-label="Confidentialité Cascade">
+  <rect width="1280" height="220" rx="28" fill="#04151c"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <g>
+      <rect x="36" y="36" width="390" height="148" rx="20" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="231" y="98" text-anchor="middle" fill="#2ee6c7" font-size="22" font-weight="800" letter-spacing="4">OFFLINE</text>
+      <text x="231" y="136" text-anchor="middle" fill="#e7fffb" font-size="18" font-weight="700">Pas de réseau</text>
+      <text x="231" y="162" text-anchor="middle" fill="#8ab8bc" font-size="14">Rien ne sort de la machine</text>
+    </g>
+    <g>
+      <rect x="445" y="36" width="390" height="148" rx="20" fill="#0a2c38" stroke="#1c5566"/>
+      <text x="640" y="98" text-anchor="middle" fill="#7ee0ff" font-size="22" font-weight="800" letter-spacing="4">RAM</text>
+      <text x="640" y="136" text-anchor="middle" fill="#e7fffb" font-size="18" font-weight="700">Pas d’historique</text>
+      <text x="640" y="162" text-anchor="middle" fill="#8ab8bc" font-size="14">Session only · pas de base</text>
+    </g>
+    <g>
+      <rect x="854" y="36" width="390" height="148" rx="20" fill="#1a0a10" stroke="#6e3038"/>
+      <text x="1049" y="98" text-anchor="middle" fill="#ff6a45" font-size="22" font-weight="800" letter-spacing="4">ONE-WAY</text>
+      <text x="1049" y="136" text-anchor="middle" fill="#fff3ec" font-size="18" font-weight="700">Hashes irréversibles</text>
+      <text x="1049" y="162" text-anchor="middle" fill="#c49a90" font-size="14">MD5 · SHA-1 · SHA-256 · SHA-512</text>
+    </g>
+  </g>
+</svg>
